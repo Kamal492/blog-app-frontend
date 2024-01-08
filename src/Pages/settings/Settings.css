@@ -1,0 +1,107 @@
+
+.settingsWrapper {
+    flex: 9;
+    padding-top: 100px;
+    
+}
+#FileInput{
+    display: none;
+}
+
+
+.settingsForm > label {
+    font-size: 20px;
+    margin-bottom: 5px;
+    
+}
+
+.settingsPP{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.settingsPImg{
+    color: #444;
+    font-size: 100px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+.settingsPP > label {
+    display: flex;
+    flex-direction: row;
+    font-size: 17px;
+    font-family: 'Varela Round', sans-serif;
+    cursor: pointer;
+}
+
+  .image-container img {
+    height: 100px;
+    width: 100px;
+    border-radius: 60px;
+  }
+
+  #fileInput{
+    display: none;
+}
+.settings{
+    padding-top: 30px;
+    
+}
+.settingsIcon{
+    font-size: 25px;
+    margin-right: 10px;
+    color: gray;
+}
+.settingsFormGroup{
+    width: 60%;
+    margin: auto;
+}
+
+.settingsInput{
+    font-size: 20px;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    width:100%;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+}
+.settingsInput:focus{
+    outline: none;
+    background-color: aliceblue;
+}
+.settingsForm{
+    width: 76vw;
+    margin: auto;
+}
+.settingsText{
+    font-size: 20px;
+    height:30vh;
+    width: 100%;
+}
+.settingsSubmit{
+    margin: auto;
+    margin-top: 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 44px;
+    display: block;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.delete-div{
+    color: red;
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+
+
