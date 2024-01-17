@@ -7,7 +7,7 @@ export default function Footer() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       
-      const res = await axios.post("/subscribe", {
+      const res = await axios.post("https://blog-backend-7rds.onrender.com/blog/subscribe", {
         email: email
       })
       if(res.status === 200) {
