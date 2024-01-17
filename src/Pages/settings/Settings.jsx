@@ -23,7 +23,7 @@ export default function Settings() {
       useEffect(() =>{
         const fetchUser = async ()=> {
           try {
-            const res = await axios.get("/user/user_info");
+            const res = await axios.get("https://blog-backend-7rds.onrender.com/blog/user/user_info");
             if (res.status === 200) {
               if(res.data.user._id !== dynamicParam) {
                 navigate(`/settings/${res.data.user._id}`);
@@ -77,14 +77,14 @@ export default function Settings() {
             
             updateUser.photo = filename;
             try {
-              await axios.post("/upload", data)
+              await axios.post("https://blog-backend-7rds.onrender.com/blog/upload", data)
             } catch (err) {
               console.log("error in uploading image");
             }
           }
           
           try{
-            await axios.put("/user/" +  dynamicParam, updateUser);
+            await axios.put("https://blog-backend-7rds.onrender.com/blog/user/" +  dynamicParam, updateUser);
             navigate("/");
           } catch(err) {
             console.log("error in updating");
@@ -99,7 +99,7 @@ export default function Settings() {
         } else {
           try{
             //console.log(user._id);
-            const res = await axios.delete("/user/" +  dynamicParam);
+            const res = await axios.delete("https://blog-backend-7rds.onrender.com/blog/user/" +  dynamicParam);
             if(res.status === 200)
              navigate("/register");
           } catch(err) {
