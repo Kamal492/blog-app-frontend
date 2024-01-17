@@ -6,7 +6,7 @@ export default function Post({post}) {
     textDecoration: 'none',
     color: 'inherit',
   };
-  const PF = "https://blog-app-krzv.onrender.com/Images/"
+  const PF = process.env.SERVER + "/Images/"
   return (
     <div className = "post">
         {!post.photo &&
