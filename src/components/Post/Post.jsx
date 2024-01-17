@@ -6,7 +6,7 @@ export default function Post({post}) {
     textDecoration: 'none',
     color: 'inherit',
   };
-  const PF = "http://localhost:8000/Images/"
+  const PF = "https://blog-app-krzv.onrender.com/Images/"
   return (
     <div className = "post">
         {!post.photo &&
