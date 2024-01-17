@@ -18,7 +18,7 @@ function SearchPosts() {
     
     useEffect(() =>{
             const fetchMyPosts = async ()=> {
-                const res = await axios.get("/posts?search=" + queryValue)
+                const res = await axios.get("https://blog-backend-7rds.onrender.com/blog/posts?search=" + queryValue)
                 setSearchPosts(res.data);
                 console.log(res.data);
             }
