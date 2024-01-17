@@ -67,7 +67,7 @@ function Topbar() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    window.location.href = "http://localhost:3000/posts/search?query=" + query;
+    window.location.href = "https://blog-diaries.netlify.app//posts/search?query=" + query;
   };
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
