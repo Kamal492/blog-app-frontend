@@ -12,7 +12,7 @@ export default function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("/auth/login", {
+    const res = await axios.post("https://blog-backend-7rds.onrender.com/blog/auth/login", {
       identifier,
       password
     })
