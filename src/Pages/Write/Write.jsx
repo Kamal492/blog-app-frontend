@@ -38,7 +38,7 @@ export default function Write(props) {
   useEffect(() =>{
     if(obj === "editPost") {
       const getPostDetail = async ()=> {
-        const res = await axios.get("/posts/" + postId);
+        const res = await axios.get("https://blog-backend-7rds.onrender.com/blog/posts/" + postId);
         if(res.status === 200){
           setPostDetails(res.data);
           setTitle(res.data.title);
@@ -68,7 +68,7 @@ export default function Write(props) {
       if(cat) {
         newPost.category = cat.toLowerCase();
         try {
-          const resp = await axios.post("/category", {
+          const resp = await axios.post("https://blog-backend-7rds.onrender.com/blog/category", {
             name: cat.toLowerCase()
           })
           console.log(resp);
@@ -95,14 +95,14 @@ export default function Write(props) {
       }
       if(obj === "newPost") {
         try{
-          const res = await axios.post("/posts", newPost);
+          const res = await axios.post("https://blog-backend-7rds.onrender.com/blog/posts", newPost);
           navigate("/posts/" + res.data._id);
         } catch(err) {
           console.log("error in posting");
         }
       } else {
         try{
-          const resp = await axios.put("/posts/" + postId, newPost);
+          const resp = await axios.put("https://blog-backend-7rds.onrender.com/blog/posts/" + postId, newPost);
           if(resp.status === 200)
            navigate("/posts/" + postId);
         } catch(err) {
