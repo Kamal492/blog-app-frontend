@@ -21,7 +21,7 @@ export default function Write(props) {
   useEffect(() =>{
     const fetchUser = async ()=> {
       try {
-            const res = await axios.get("/user/user_info");
+            const res = await axios.get("https://blog-backend-7rds.onrender.com/blog/user/user_info");
             if (res.status === 200) {
               setUser(res.data.user);
             } else {
