@@ -60,7 +60,7 @@ export default function SinglePost() {
     textDecoration: 'none',
     color: 'inherit',
   };
-  const PF = process.env.SERVER + "/Images/"
+  const PF = "https://blog-backend-7rds.onrender.com/Images/"
   return (
     <div className='Single-Post'>
       <Topbar />
