@@ -13,7 +13,7 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("/auth/register", {
+    const res = await axios.post("https://blog-backend-7rds.onrender.com/blog/auth/register", {
       username,
       email,
       password
