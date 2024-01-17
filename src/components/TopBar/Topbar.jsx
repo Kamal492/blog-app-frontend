@@ -14,7 +14,7 @@ function Topbar() {
   const [catExpanded, setCatExpanded] = useState(false);
   const [categories, setCategories] = useState([]);
   const [query, setQuery] = useState("");
-  const PF = "https://blog-app-krzv.onrender.com/Images/"
+  const PF = process.env.SERVER + "/Images/"
   const navigate = useNavigate();
   const toggleList = () => {
     setIsExpanded(!isExpanded);
@@ -67,7 +67,7 @@ function Topbar() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    window.location.href = "https://blog-diaries.netlify.app//posts/search?query=" + query;
+    window.location.href = "https://blog-diaries.netlify.app/posts/search?query=" + query;
   };
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
