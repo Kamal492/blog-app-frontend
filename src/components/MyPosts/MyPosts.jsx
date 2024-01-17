@@ -16,7 +16,7 @@ function MyPosts() {
     useEffect(() =>{
       const fetchUser = async ()=> {
         try {
-          const res = await axios.get("/user/user_info");
+          const res = await axios.get("https://blog-backend-7rds.onrender.com/blog/user/user_info");
           if (res.status === 200) {
             setUser(res.data.user);
           } else {
@@ -32,7 +32,7 @@ function MyPosts() {
     
     useEffect(() =>{
             const fetchMyPosts = async ()=> {
-                const res = await axios.get("/posts?user=" + user.username)
+                const res = await axios.get("https://blog-backend-7rds.onrender.com/blog/posts?user=" + user.username)
                 setMyPosts(res.data);
                 console.log(res.data);
             }
