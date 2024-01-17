@@ -17,7 +17,7 @@ function CategoryPosts() {
     
     useEffect(() =>{
             const fetchMyPosts = async ()=> {
-                const res = await axios.get("/posts?cat=" + dynamicParamCat)
+                const res = await axios.get("https://blog-backend-7rds.onrender.com/blog/posts?cat=" + dynamicParamCat)
                 setCatPosts(res.data);
                 console.log(res.data);
             }
