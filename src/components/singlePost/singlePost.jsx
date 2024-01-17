@@ -14,7 +14,7 @@ export default function SinglePost() {
 
   useEffect(() =>{
     const fetchUser = async ()=> {
-      const res = await axios.get("/user/user_info")
+      const res = await axios.get("https://blog-backend-7rds.onrender.com/blog/user/user_info")
       if(res.status === 200) {
         setUser(res.data.user)
       }
@@ -25,7 +25,7 @@ export default function SinglePost() {
   useEffect(() =>{
     const getPost = async ()=> {
       try {
-      const res = await axios.get("/posts/" + id);
+      const res = await axios.get("https://blog-backend-7rds.onrender.com/blog/posts/" + id);
       if(res.status === 200) {
         setPost(res.data);
       } 
@@ -46,7 +46,7 @@ export default function SinglePost() {
       navigate("/login")
     } else {
       try{
-        const res = await axios.delete("/posts/" +  post._id);
+        const res = await axios.delete("https://blog-backend-7rds.onrender.com/blog/posts/" +  post._id);
         if(res.status === 200)
          navigate("/myposts");
       } catch(err) {
